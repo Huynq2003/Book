@@ -14,7 +14,6 @@ function Login({ url }: { url: string }) {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            // Handle any necessary side effects here
         };
 
         fetchMovies();

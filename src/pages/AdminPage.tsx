@@ -68,14 +68,14 @@ const AdminPage: React.FC = () => {
   };
 
   const handleAddBestSeller = (book: Book) => {
-    dispatch(updateBook({ ...book, isBestSeller: true })); // Cập nhật trạng thái bán chạy
+    dispatch(updateBook({ ...book, isBestSeller: true }));
     message.success(`Sách "${book.title}" đã được thêm vào danh sách khuyến mãi!`);
   };
 
   const handleRemoveBestSeller = (bookId: number) => {
     const book = booksByGrade[selectedGrade].find((b: Book) => b.id === bookId);
     if (book) {
-      dispatch(updateBook({ ...book, isBestSeller: false })); // Cập nhật trạng thái bán chạy
+      dispatch(updateBook({ ...book, isBestSeller: false }));
       message.success(`Sách đã được xóa khỏi danh sách khuyến mãi!`);
     }
   };
